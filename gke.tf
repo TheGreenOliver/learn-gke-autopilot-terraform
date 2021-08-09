@@ -15,9 +15,9 @@ variable "gke_num_nodes" {
 provider "google-beta" {
   # Add JSON file with credentials below
   credentials = "${file("FILE_NAME")}"
-  project     = "bionic-mercury-320417"
-  region      = "us-central1"
-  zone = "us-central1-a"
+  project     = "PROJECT_NAME"
+  region      = "REGION"
+  zone = "ZONE"
 
 }
 
@@ -25,9 +25,9 @@ provider "google-beta" {
 resource "google_container_cluster" "primary" {
   provider = google-beta
     enable_autopilot = true
-    project     = "bionic-mercury-320417"
-    name     = "bionic-mercury-320417-gke-test"
-    location = "us-central1"
+    project     = "PROJECT_NAME"
+    name     = "PROJECT_NAME"
+    location = "REGION1"
 }
 
   
